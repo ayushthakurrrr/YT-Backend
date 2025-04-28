@@ -5,6 +5,7 @@ import { uploadOnCloudinary, deleteItem } from "../utils/cloudinary.js";
 import { ApiResponse } from '../utils/apiResponse.js'
 import jwt from "jsonwebtoken";
 import fs from "fs"
+import mongoose from "mongoose";
 
 const generateAccessAndRefereshTokens = async (userId) => {
     try {
@@ -453,7 +454,6 @@ const getUserChannelProfile = asyncHandler(async (req, res) => {
                 avatar: 1,
                 coverImage: 1,
                 email: 1
-
             }
         }
     ])
